@@ -1,0 +1,23 @@
+{
+  "$id": "site-entity",
+  "filter": {
+    "entityIds": ["global-data"]
+  },
+  "source": "knowledgeGraph",
+  "fields": [
+      "name", 
+      "c_company",
+      "c_about",
+      "c_headerLink",
+      "c_icons",
+      "c_legal",
+      "c_pizzarestaurant",
+      "c_logo",
+      "logo"
+
+  ],
+  "localization": {
+    "locales": ["en"],
+    "primary": false
+  }
+}
