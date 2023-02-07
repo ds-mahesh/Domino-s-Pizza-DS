@@ -3,10 +3,10 @@ import { breadcrumbhome, conversionDetailsDirection } from "../../../sites-globa
 import { regionNames } from "../../../sites-global/global";
 import { Link } from "@yext/pages/components";
 type data = {
-  name: any;
-  parents: any;
-  baseUrl: any;
-  address: any;
+  name?: any;
+  parents?: any;
+  baseUrl?: any;
+  address?: any;
 };
 
 const BreadCrumbs = (props: data) => {
@@ -27,7 +27,7 @@ const BreadCrumbs = (props: data) => {
 
            
        if (parents[i].meta.entityType.id == "ce_country") {
-          // parents[i].name = regionNames.of(parents[i].name);
+          parents[i].name = regionNames.of(parents[i].name);
  
           parents[i].slug = parents[i].slug;
           

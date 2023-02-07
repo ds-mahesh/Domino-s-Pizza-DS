@@ -221,12 +221,13 @@ const Locator: Template<TemplateRenderProps>= ({
           <SearchLayout _site={_site}/>
      
         </SearchHeadlessProvider>
-        <Footer _site={_site}/>
+       
    
       </PageLayout>
       
       </AnalyticsScopeProvider>
       </AnalyticsProvider>
+      <Footer _site={_site}/>
      
     </>
   );
