@@ -16,12 +16,15 @@ import {
   HeadConfig,
 } from "@yext/pages";
 import BreadCrumb from "../components/layouts/Breadcrumb";
+import BreadCrumbs from "../components/layouts/Breadcrumb";
 
 export const config: TemplateConfig = {
   stream: {
-    $id: "ce_country",
+    $id: "ce_region",
     filter: {
-      entityTypes: ["ce_country"],
+    //   savedFilterIds: ["dm_stores-directory_address_region"],
+    entityTypes:['ce_region'],
+
     },
     fields: [
       "id",
@@ -73,7 +76,7 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
   };
 };
 
- const Country: Template<TemplateRenderProps> = ({
+ const State: Template<TemplateRenderProps> = ({
   relativePrefixToRoot,
   path,
   document,
@@ -88,11 +91,11 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
     dm_directoryChildren
   } = document;
 
-  // var sortedChildren = dm_directoryChildren.sort(function(a:any, b:any) {
-  //   var a = a.name;
-  //   var b = b.name;
-  //   return (a < b) ? -1 :(a > b) ? 1 : 0;
-  // });
+//   var sortedChildren = dm_directoryChildren.sort(function(a:any, b:any) {
+//     var a = a.name;
+//     var b = b.name;
+//     return (a < b) ? -1 :(a > b) ? 1 : 0;
+//   });
   
   const childrenDivs = dm_directoryChildren.map((entity:any) => (
     <div>
@@ -113,9 +116,10 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
     <>
       <PageLayout _site={_site} templateData={{__meta, document}}>
         <Header  _site={_site} />
-        <div className="" style={{backgroundColor:"lightskyblue"}}>
-          <BreadCrumb name={name} parents={dm_directoryParents} baseUrl={relativePrefixToRoot} />
-          <div className="section space-y-14 px-10" >
+        <div style={{backgroundColor:"lightsalmon"}}>
+        <div className="centered-container">
+          {/* <BreadCrumbs name={name} parents={dm_directoryParents} baseUrl={relativePrefixToRoot} /> */}
+          <div className="section space-y-14 px-10">
             <div className="space-y-6">
               <h1 className="text-center">{c_addressRegionDisplayName}</h1>
               {/* <p className="text-2xl text-center">{updatedDescription}</p> */}
@@ -124,7 +128,8 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
                 {childrenDivs}
               </div>
           </div>
-         
+          
+        </div>
         </div>
         <Footer  _site={_site} />
       </PageLayout>
@@ -132,4 +137,4 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
   );
 };
 
-export default Country;
+export default State;

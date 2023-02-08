@@ -643,16 +643,18 @@ const City: Template<TemplateRenderProps> = ({
         text={name ? name : ""}
         template={"city"}
       /> */}
+      <div  style={{backgroundColor:"lightgreen"}}>
       <h1 className="sec_heading mt-12" style={{ textAlign: "center" }}>
         Available Stores in {name}, {document.dm_directoryParents[2].name},{" "}
         {document.dm_directoryParents[1].name}{" "}
       </h1>
       <div className="directory-country nearby-sec">
         <div className="container">
-          <div className="flex  flex-wrap justify-center -mx-[15px]" style={{border:"2px"}}>
+          <div className="flex  flex-wrap justify-center -mx-[15px]">
             {childrenDivs}
           </div>
         </div>
+      </div>
       </div>
       {/* <Footer></Footer> */}
       {/* <Footer midfooter={_site.c_midfooter} buyingonline={_site.c_buyingOnline} buyingonlineCTAs={_site.c_buyingOnlinecta} latestPhone={_site.c_latestPhones} latestPhonesCTAs={_site.c_latestPhonescta}

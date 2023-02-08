@@ -76,7 +76,7 @@ const Footer = (props: any) => {
 			<footer className="site-footer inline-block w-full">
 							 		  					  					  
 				    
-				<div style={{backgroundColor:"lightgreen"}} >
+				<div style={{backgroundColor:"darkgray"}} >
 					
 				<div  className="container px-6 pt-6" style={{height:"330px"}}>
 					<div className="store-locator">					   

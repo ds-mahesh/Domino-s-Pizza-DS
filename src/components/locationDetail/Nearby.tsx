@@ -3,9 +3,9 @@ import ApiCall from "../../Apis/ApiCall";
 import Address from "../commons/Address";
 import GetDirection from "../commons/GetDirection";
 import OpenClose from "../commons/openClose"
-import timesvg from "../../images/watch-icn.svg"
-import mapimage from "../../images/map.svg";
-import Phonesvg from "../../images/phone.svg"
+// import timesvg from "../../images/watch-icn.svg"
+// import mapimage from "../../images/map.svg";
+// import Phonesvg from "../../images/phone.svg"
 import { Addresssvg, mobilesvg, View_Store } from "../../../sites-global/global";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Link } from "@yext/pages/components";
