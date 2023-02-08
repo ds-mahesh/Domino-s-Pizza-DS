@@ -286,6 +286,11 @@ const City: Template<TemplateRenderProps> = ({
   const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
 
   const childrenDivs = dm_directoryChildren.map((entity: any) => {
+    <div>
+      <a key="uRL" href={relativePrefixToRoot + entity.slug} className="font-bold text-2xl text-blue-700 hover:underline">
+        {entity.name} ({entity.dm_directoryChildrenCount})
+      </a>
+    </div>
     var origin: any = null;
     if (entity.address.city) {
       origin = entity.address.city;
@@ -622,7 +627,7 @@ const City: Template<TemplateRenderProps> = ({
         <AnalyticsScopeProvider name={""}>
       {/* <Header></Header> */}
       <Header _site={_site} />
-      <PageLayout _site={_site}>
+      <PageLayout _site={_site}  templateData={{__meta, document}}>
       
       {/* <Header navbar={_site.c_navigationBarLinks}></Header> */}
       {/* <Header personal={_site.c_personal} bussiness={_site.c_business} findAStore={_site.c_findAStore} networkStatusChecker={_site.c_networkStatusChecker}></Header> */}
@@ -662,7 +667,7 @@ const City: Template<TemplateRenderProps> = ({
      c_cPIChangesDescription1={_site.c_cPIChangesDescription1} vodafoneDetails={_site.c_vodafoneDetails}
      ></Footer> */}
      <Footer _site={_site}/>
-     </PageLayout>
+     </PageLayout  >
       </AnalyticsScopeProvider>
       
       </AnalyticsProvider>
