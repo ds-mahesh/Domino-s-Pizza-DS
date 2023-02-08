@@ -37,9 +37,9 @@ import PageLayout from "../components/layouts/PageLayout";
 var currentUrl = "";
 export const config: TemplateConfig = {
   stream: {
-    $id: "city",
+    $id: "ce_city",
     filter: {
-      // savedFilterIds: ["dm_stores-directory_address_city"],
+      savedFilterIds: ["dm_stores-directory_address_city"],
       entityTypes: ["ce_city"],
     },
     fields: [
