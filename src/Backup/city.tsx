@@ -23,17 +23,17 @@ import { Addresssvg, favicon, mobilesvg, regionNames, stagingBaseurl } from "../
 import { JsonLd } from "react-schemaorg";
 import Address from "../components/commons/Address";
 import PageLayout from "../components/layouts/PageLayout";
-import Availability from "../components/locationDetail/Availability";
+// import Availability from "../components/locationDetail/Availability";
 import OpenClose from "../components/commons/openClose";
 import timesvg from "../images/watch-icn.svg";
 import { Link } from "@yext/pages/components";
 var currentUrl = "";
 export const config: TemplateConfig = {
   stream: {
-    $id: "matlan-city",
+    $id: "ce_city",
     filter: {
       entityTypes: ["ce_city"],
-      savedFilterIds: ["dm_matalan-stores-directory_address_city"],
+      savedFilterIds: ["dm_stores-directory_address_city"],
     },
     fields: [
       "id",
@@ -57,7 +57,7 @@ export const config: TemplateConfig = {
       "dm_directoryChildren.yextDisplayCoordinate"
     ],
     localization: {
-      locales: ["en_GB"],
+      locales: ["en"],
       primary: false,
     },
   },
@@ -454,7 +454,7 @@ const City: Template<TemplateRenderProps> = ({
           itemListElement: breadcrumbScheme,
         }}
       />
-      <PageLayout global={_site}>
+      <PageLayout _site={_site}>
         <BreadCrumbs
           name={name}
           address={address}
@@ -466,7 +466,7 @@ const City: Template<TemplateRenderProps> = ({
           <div className="container mx-auto">
             <div className="sec-title">
               <h2>
-              MGM stores in {name}
+              Domino's Pizza In- {name}
               </h2>
             </div>
             <div className="flex flex-wrap justify-center items-start -mx-2.5 lg:-mx-[.9375rem]">

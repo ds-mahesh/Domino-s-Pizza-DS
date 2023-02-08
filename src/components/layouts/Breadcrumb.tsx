@@ -27,7 +27,7 @@ const BreadCrumbs = (props: data) => {
 
            
        if (parents[i].meta.entityType.id == "ce_country") {
-          parents[i].name = regionNames.of(parents[i].name);
+          // parents[i].name = regionNames.of(parents[i].name);
  
           parents[i].slug = parents[i].slug;
           

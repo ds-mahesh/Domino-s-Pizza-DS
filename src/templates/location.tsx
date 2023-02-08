@@ -26,7 +26,7 @@ import {
 import PageLayout from "../components/layouts/PageLayout";
 import { fetch } from "@yext/pages/util";
 import Nav from "../components/layouts/Nav";
-import Footer from "../components/layouts/footer";
+
 import Menu from "../components/locationDetail/Menu";
 import PhotoSlider from "../components/locationDetail/PhotoSlider";
 import PhotoGallery from "../components/locationDetail/PhotoGallery";
@@ -39,6 +39,7 @@ import OpenClose from "../components/commons/openClose";
 import Faq from "../components/locationDetail/Faqs";
 import { StaticData } from "../../sites-global/staticData";
 import Header from "../components/layouts/header";
+import Footer from "../components/layouts/footer";
 import {apikey_for_entity, baseuRL,stagingBaseurl,AnalyticsEnableDebugging,AnalyticsEnableTrackingCookie, favicon } from "../../sites-global/global";
 import {
   AnalyticsProvider,
@@ -247,6 +248,12 @@ type ExternalApiData = TemplateProps & { externalApiData: nearByLocation };
 export const transformProps: TransformProps<ExternalApiData> = async (
   data: any
 ) => {
+//   const url = `https://liveapi-sandbox.yext.com/v2/accounts/me/entities/geosearch?radius=2500&location=INDIA&api_key=2ed997f92ca318240b8a95375187f129&v=20181201&resolvePlaceholders=true&entityTypes=location&limit=4`
+//   const externalApiData = (await fetch(url).then((res: any) =>
+//     res.json()
+//   )) as nearByLocation;
+//   return { ...data, externalApiData };
+// };
 
   var location = `${data.document.yextDisplayCoordinate ? data.document.yextDisplayCoordinate.latitude : data.document.displayCoordinate.latitude},${data.document.yextDisplayCoordinate ? data.document.yextDisplayCoordinate.longitude : data.document.displayCoordinate.longitude}`;
 
