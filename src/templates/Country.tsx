@@ -21,7 +21,7 @@ export const config: TemplateConfig = {
   stream: {
     $id: "ce_country",
     filter: {
-      savedFilterIds: ["dm_stores-directory"],
+      entityTypes: ["ce_country"],
     },
     fields: [
       "id",
@@ -73,7 +73,7 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
   };
 };
 
- const State: Template<TemplateRenderProps> = ({
+ const Country: Template<TemplateRenderProps> = ({
   relativePrefixToRoot,
   path,
   document,
@@ -111,7 +111,7 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
 
   return (
     <>
-      <PageLayout _site={_site} >
+      <PageLayout _site={_site} templateData={{__meta, document}}>
         <Header  _site={_site} />
         <div className="centered-container">
           <BreadCrumb name={name} parents={dm_directoryParents} baseUrl={relativePrefixToRoot} />
@@ -132,4 +132,4 @@ export const getPath: GetPath<TemplateProps> = ({document}) => {
   );
 };
 
-export default State;
+export default Country;
