@@ -176,7 +176,7 @@ const country: Template<TemplateRenderProps> = ({
       <li className=" storelocation-category">
         <a
           key={entity.slug}
-          href={stagingBaseurl + detlslug}
+          href={slug +"/"+ entity.slug + ".html"}
         >
           {entity.name} ({entity.dm_directoryChildrenCount})
         </a>

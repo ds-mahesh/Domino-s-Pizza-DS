@@ -13,7 +13,10 @@
       "c_legal",
       "c_pizzarestaurant",
       "c_logo",
-      "logo"
+      "logo",
+      "c_cardlogo",
+      "c_cardlogo1",
+      "c_cardlogo2"
 
   ],
   "localization": {

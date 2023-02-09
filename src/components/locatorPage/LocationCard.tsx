@@ -8,6 +8,7 @@ import Address from "../commons/Address";
 import OpenClose from "../commons/openClose";
 import { StaticData } from "../../../sites-global/staticData";
 import { Link } from "@yext/pages/components";
+import { cookieText, cookiesUrl } from "../../../sites-global/global"
 
 
 const metersToMiles = (meters: number) => {
@@ -15,7 +16,6 @@ const metersToMiles = (meters: number) => {
   return miles.toFixed(2);
 }
 let array = [];
-
 
 
 const LocationCard: CardComponent<Location> = ({result}) => {

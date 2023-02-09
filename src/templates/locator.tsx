@@ -42,6 +42,9 @@ export const config: TemplateConfig = {
       "c_legal",
       "c_pizzarestaurant",
       "c_logo",
+      "c_cardlogo",
+      "c_cardlogo1",
+      "c_cardlogo2"
      
 
      
@@ -175,7 +178,18 @@ const Locator: Template<TemplateRenderProps>= ({
    const {    
    _site
    } = document;
- 
+
+   const Cuponcard= _site.c_cardlogo?.map((i:any)=>(   
+    <img src={i.url} className="card-img-top rounded-lg" alt="..." style={{height:"300px",width:"400px"}}/>  
+  ));
+
+  const Cuponcard1= _site.c_cardlogo1?.map((i:any)=>(   
+    <img src={i.url} className="card-img-top rounded-lg " alt="..." style={{height:"300px",width:"400px"}}/>  
+  ));
+
+  const Cuponcard2= _site.c_cardlogo2?.map((i:any)=>(   
+    <img src={i.url} className="card-img-top rounded-lg" alt="..." style={{height:"300px",width:"400px"}}/>  
+  ));
 
   let templateData = { document: document, __meta: __meta };
   const endpoints =  {
@@ -208,7 +222,11 @@ const Locator: Template<TemplateRenderProps>= ({
         <AnalyticsScopeProvider name={""}>
       <PageLayout _site={_site}>
       <Header _site={_site}/>
-     
+        <div className="flex space-x-24 " style={{backgroundColor:"lightblue"}}>
+          <div>{Cuponcard}</div>
+          <div>{Cuponcard1}</div>
+          <div>{Cuponcard2}</div>
+        </div>
       {/* <Banner /> */}
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
@@ -219,7 +237,6 @@ const Locator: Template<TemplateRenderProps>= ({
           sessionTrackingEnabled={true}
           endpoints={AnswerExperienceConfig.endpoints}    
         >
-          
           <SearchLayout _site={_site}/>
      
         </SearchHeadlessProvider>
