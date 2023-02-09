@@ -316,7 +316,7 @@ const City: Template<TemplateRenderProps> = ({
       <div className="w-full sm:w-1/2 xl:w-1/3 px-[15px]">
         <div className="near-location">
           <h4>
-            <Link eventName={"Location detail"} key={entity.slug} href={`/${detailPageUrl}`}>
+            <Link eventName={"Location detail"} key={entity.slug} href={`/${entity.slug.toString()}.html`}>
               {entity.name}
             </Link>
           </h4>
