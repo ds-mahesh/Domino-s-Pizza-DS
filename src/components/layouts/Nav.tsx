@@ -23,7 +23,7 @@ console.log(props)
               
              {/* <img src={props._site.c_hCLHeaderLogo?.image?.url} alt="logo" /> */}
             </div>
-            {props._site.c_footerDescription}
+            
           </div>
           <div className="flex justify-center">
   <div className="mb-3 xl:w-96">

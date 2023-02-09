@@ -33,6 +33,7 @@ import {
 // import { stagingBaseUrl } from "../config/globalConfig";
 import { JsonLd } from "react-schemaorg";
 import PageLayout from "../components/layouts/PageLayout";
+import BreadCrumbs from "../components/layouts/Breadcrumb";
 // import Herobanner from "../components/commons/Herobanner";
 var currentUrl = "";
 export const config: TemplateConfig = {
@@ -286,11 +287,6 @@ const City: Template<TemplateRenderProps> = ({
   const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
 
   const childrenDivs = dm_directoryChildren.map((entity: any) => {
-    <div>
-      <a key="uRL" href={relativePrefixToRoot + entity.slug} className="font-bold text-2xl text-blue-700 hover:underline">
-        {entity.name} ({entity.dm_directoryChildrenCount})
-      </a>
-    </div>
     var origin: any = null;
     if (entity.address.city) {
       origin = entity.address.city;
@@ -631,12 +627,12 @@ const City: Template<TemplateRenderProps> = ({
       
       {/* <Header navbar={_site.c_navigationBarLinks}></Header> */}
       {/* <Header personal={_site.c_personal} bussiness={_site.c_business} findAStore={_site.c_findAStore} networkStatusChecker={_site.c_networkStatusChecker}></Header> */}
-      {/* <BreadCrumbs
+      <BreadCrumbs
         name={name}
         parents={dm_directoryParents}
         baseUrl={relativePrefixToRoot}
         address={{}}
-      ></BreadCrumbs> */}
+      ></BreadCrumbs>
        <div className="header-title ">
           {/* <Herobanner c_bannerTitle={_site.c_bannerTitle}></Herobanner> */}
         </div>
@@ -653,9 +649,9 @@ const City: Template<TemplateRenderProps> = ({
         Available Stores in {name}, {document.dm_directoryParents[2].name},{" "}
         {document.dm_directoryParents[1].name}{" "}
       </h1>
-      <div className="directory-country nearby-sec">
-        <div className="container">
-          <div className="flex  flex-wrap justify-center -mx-[15px]">
+      <div className="directory-country nearby-sec" style={{backgroundColor:"lightcyan"}}>
+        <div className="container" >
+          <div className="flex  flex-wrap justify-center -mx-[15px]" style={{}}>
             {childrenDivs}
           </div>
         </div>

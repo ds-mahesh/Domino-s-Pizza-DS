@@ -80,7 +80,12 @@ export const config: TemplateConfig = {
       "c_cuponcard",
       "c_googleLogo",
       "c_bannerCta",
-      "c_howzetimage"
+      "c_howzetimage",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug",
+      "dm_directoryParents.meta.entityType",
+      "c_faq.question",
+      "c_faq.answer",
       
       
       
@@ -301,9 +306,9 @@ const Location: Template<ExternalApiRenderData> = ({
     c_googleLogo,
     c_bannerCta,
     c_howzetimage,
-
-    
-    name
+    dm_directoryParents,
+    name,
+    c_faq
   } = document;
   // const services = c_servicesIn?.map((link: any) => (
 	// 	<a className="navbar-item" href={link.link} >
@@ -504,7 +509,15 @@ breadcrumbScheme.push({
         {" "}
         <AnalyticsScopeProvider name={""}>
       <PageLayout _site={_site}>
+      {/* <BreadCrumbs name={name} address={address} parents={dm_directoryParents}/> */}
       <Header _site={_site}/> 
+      
+        <BreadCrumbs
+          name={name}
+          address={address}
+          parents={dm_directoryParents}
+          baseUrl={relativePrefixToRoot}
+        ></BreadCrumbs>
       {/* <Banner c_bannerImage={c_bannerImage}  name={name}/> */}
       <div  className="flex" style={{backgroundColor:"DodgerBlue"}}>
             <div className="flex-col space-y-6" style={{marginTop:"100px",marginLeft:"70px",width:"500px"}}>
@@ -629,12 +642,9 @@ breadcrumbScheme.push({
       <h1 style={{color:"DodgerBlue"}}><b>Domino's Pizza: Delivering Happiness </b></h1>
        <p className="pt-6" style={{fontSize:"20px"}}>{description}</p> 
      </div>   
-     </div>  
-     <Footer _site={_site}/>
-  
-                    
-    
-    
+     </div> 
+     <Faq faqs={c_faq} />
+     <Footer _site={_site}/>    
      </PageLayout>
       </AnalyticsScopeProvider>
       </AnalyticsProvider>

@@ -21,6 +21,7 @@ import { StaticData } from "../../sites-global/staticData";
 import Header from "../components/layouts/header";
 import Footer from "../components/layouts/footer";
 import Banner from "../components/locationDetail/banner";
+import Nav from "../components/layouts/Nav";
 import {
   AnalyticsProvider,
   AnalyticsScopeProvider,
@@ -193,7 +194,7 @@ const Locator: Template<TemplateRenderProps>= ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "MGM ",
+          name: "Domino's Pizza ",
           url: stagingBaseurl,
           logo: favicon,
         }}
@@ -207,6 +208,7 @@ const Locator: Template<TemplateRenderProps>= ({
         <AnalyticsScopeProvider name={""}>
       <PageLayout _site={_site}>
       <Header _site={_site}/>
+     
       {/* <Banner /> */}
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
