@@ -75,9 +75,9 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
 };
 
 
-// export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-//   return [`index-old/${document.id.toString()}`];
-// };
+export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
+  return [`index-old/${document.id.toString()}`];
+};
 
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
@@ -260,7 +260,7 @@ const region: Template<TemplateRenderProps> = ({
       <li className=" storelocation-category">
         <a
           key={entity.slug}
-          href={stagingBaseurl  + detlslug}
+          href={slug +"/"+ entity.slug + ".html"}
         >
           {entity.name} ({entity.dm_directoryChildrenCount})
         </a>
