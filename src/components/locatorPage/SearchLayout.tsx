@@ -181,7 +181,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
           
   }
 
-  let bannerimage = props._site.c_locatorBannerImage != undefined  ? props._site.c_locatorBannerImage.image.url:'';
+  // let bannerimage = props._site.c_locatorBannerImage != undefined  ? props._site.c_locatorBannerImage.image.url:'';
  
 
   // const loader =
@@ -263,6 +263,11 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
                 {
                   entityType: "location",
                   fieldApiName: "address.line1",
+
+                },
+                {
+                  entityType: "location",
+                  fieldApiName: "address.line2",
 
                 },
                 {

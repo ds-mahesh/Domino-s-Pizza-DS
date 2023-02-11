@@ -307,7 +307,7 @@ const City: Template<TemplateRenderProps> = ({
       detailPageUrl = `${entity.id}-${result}.html`
     }
     else{
-      detailPageUrl = `${entity.slug.toString()}.html`
+      detailPageUrl = `${entity.slug.toString()}`
     }
     return (
       <>
@@ -316,7 +316,7 @@ const City: Template<TemplateRenderProps> = ({
       <div className="w-full sm:w-1/2 xl:w-1/3 px-[15px]">
         <div className="near-location">
           <h4>
-            <Link eventName={"Location detail"} key={entity.slug} href={`/${entity.slug.toString()}.html`}>
+            <Link eventName={"Location detail"} key={entity.slug} href={`/${detailPageUrl}`}>
               {entity.name}
             </Link>
           </h4>

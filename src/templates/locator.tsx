@@ -35,16 +35,16 @@ export const config: TemplateConfig = {
     // directly as props to the default exported function.
     fields: [
       "name",
-      "c_company",
-      "c_about",
-      "c_headerLink",
-      "c_icons",
-      "c_legal",
-      "c_pizzarestaurant",
-      "c_logo",
-      "c_cardlogo",
-      "c_cardlogo1",
-      "c_cardlogo2"
+      // "c_company",
+      // "c_about",
+      // "c_headerLink",
+      // "c_icons",
+      // "c_legal",
+      // "c_pizzarestaurant",
+      // "c_logo",
+      // "c_cardlogo",
+      // "c_cardlogo1",
+      // "c_cardlogo2"
      
 
      
@@ -105,16 +105,16 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
       },
     },
 
-     {
-       type: "link",
-       attributes: {
-         rel: "canonical",
-         href: `${
-           document._site.c_canonical?document.c_canonical:stagingBaseurl
+    //  {
+    //    type: "link",
+    //    attributes: {
+    //      rel: "canonical",
+    //      href: `${
+    //        document._site.c_canonical?document.c_canonical:stagingBaseurl
             
-         }`,
-       },
-     },
+    //      }`,
+    //    },
+    //  },
  
      {
        type: "meta",

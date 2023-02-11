@@ -53,7 +53,7 @@ function opentime(e: any) {
 //  }
   
   return (
-    <div className={`location result-list-inner-${result.id} result`} id={`result-${result.id}`} key={`result-${result.rawData.id}`}>
+    <div style={{backgroundColor:"lightgreen"}} className={`location result-list-inner-${result.id} result`} id={`result-${result.id}`} key={`result-${result.rawData.id}`}>
       <div className="result-inner ">
         <div className="center-column">
           <div className="lp-param-results lp-subparam-hours">
@@ -108,7 +108,7 @@ function opentime(e: any) {
 
             </div>
          
-             <div className="button-bx">
+             <div className="button-bx" >
               <Link type="button" href={`/${result.rawData.id}`} className=" btn notHighlight "
               data-ya-track={`viewStore -${result.rawData.name}`}
               eventName={`viewStore -${result.rawData.name}`}
