@@ -222,7 +222,7 @@ const Locator: Template<TemplateRenderProps>= ({
         <AnalyticsScopeProvider name={""}>
       <PageLayout _site={_site}>
       <Header _site={_site}/>
-        <div className="flex space-x-24 " style={{backgroundColor:"lightblue"}}>
+        <div className="flex space-x-24 pt-6" style={{backgroundColor:"lightblue"}}>
           <div>{Cuponcard}</div>
           <div>{Cuponcard1}</div>
           <div>{Cuponcard2}</div>

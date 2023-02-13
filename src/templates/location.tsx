@@ -86,6 +86,7 @@ export const config: TemplateConfig = {
       "dm_directoryParents.meta.entityType",
       "c_faq.question",
       "c_faq.answer",
+      "c_cardimagedescription"
       
       
       
@@ -310,7 +311,8 @@ const Location: Template<ExternalApiRenderData> = ({
     c_howzetimage,
     dm_directoryParents,
     name,
-    c_faq
+    c_faq,
+    c_cardimagedescription
   } = document;
   // const services = c_servicesIn?.map((link: any) => (
 	// 	<a className="navbar-item" href={link.link} >
@@ -336,6 +338,22 @@ const Googlelogo =c_googleLogo?.map((link: any) => (
        </a>
      </div>      
   ));
+
+  // const  cardImage = c_cardImageDescription?.image?.map((link: any) => (
+  //   <div className="">  
+  //         <img src={link?.url} className="flex space-x-4 h-16 w-48"/><br/>          
+  //      </div>      
+  //   ));
+    
+  const  cardImageDescription = c_cardimagedescription?.map((link: any) => (
+    <div className="" style={{height:"450px",width:"450px",paddingLeft:"5px"}}> 
+          <img src={link?.image?.url} className=""/> 
+          <p style={{fontSize:"18px"}}>{link?.description}</p>
+          <a className="pt-2" href={link?.cta?.link} style={{}} >
+          <button className="card-img-top rounded-lg" style={{backgroundColor:"lightgreen",height:"30px",width:"100px"}}><b>{link?.cta?.label} </b></button></a>
+       </div>      
+    ));
+  
 
 
 
@@ -538,7 +556,7 @@ breadcrumbScheme.push({
           <div className="" style={{paddingTop:"90px"}}>{image}</div>
     </div>
         <h2 className=" pt-6" style={{fontSize:"30px",paddingLeft:"30px", color:"gray"}}><b>Coupons & Offers</b></h2>
-        <div className=" flex space-x-4 pt-6" style={{height:"270px"}}>{Cuponcard}</div>
+        <div className=" flex space-x-4 pt-6 " style={{height:"270px"}}>{Cuponcard}</div>
         
      
       <div className="container">
@@ -624,8 +642,12 @@ breadcrumbScheme.push({
         <Faq faqs={c_faqs} />
      </div> */}
      {/* <div><About about={c_about}/></div> */}
+     {/* <div>{cardImage}</div> */}
+     <h2 className=" pt-6" style={{fontSize:"30px",paddingLeft:"30px", color:"gray"}}><b>PIZZA</b></h2>
      
-     <h1 className="" style={{color:"GrayText",paddingLeft:"20px"}}><b>Explore</b></h1>
+     <div className="flex space-x-8">{cardImageDescription}</div>
+     
+     <h1 className="pt-6" style={{color:"GrayText",paddingLeft:"20px"}}><b>Explore</b></h1>
      <div  className="flex" style={{backgroundColor:"lightBlue",height:"500px"}}>
          <div className="w-1/2" style={{height:"600px",width:"800px",paddingTop:"55px"}}> {Explore} 
          </div>
