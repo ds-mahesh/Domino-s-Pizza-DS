@@ -349,6 +349,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
             <div>
              
                 <VerticalResults
+
                   displayAllOnNoResults={false}
                   CardComponent={LocationCard}
                   locationResults={locationinbuit}

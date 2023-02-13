@@ -297,7 +297,7 @@ const City: Template<TemplateRenderProps> = ({
     }
     // let key: any = Object.keys(entity.hours)[0];
     let detailPageUrl = '';
-    var name: any = entity.name.toLowerCase();
+    var name: any = entity.name;
     var string: any = name.toString();
     let removeSpecialCharacters = string.replace(
       /[&\/\\#^+()$~%.'":*?<>{}!@]/g,
