@@ -116,18 +116,18 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   var name: any = document.name.toLowerCase();
   var string: any = name.toString();;
   let result: any = string.replaceAll(" ", "-");
-  document.dm_directoryParents.map((result: any, i: Number) => {
-    if (i > 0) {
-      url += result.slug + "/"
-    }
-  })
+  // document.dm_directoryParents.map((result: any, i: Number) => {
+  //   if (i > 0) {
+  //     url += result.slug + "/"
+  //   }
+  // })
   if (!document.slug) {
-    url += `${result}.html`;
+    url = `${result}.html`;
   } else {
-    url += `${document.slug.toString()}.html`;
+    url = `${document.slug.toString()}.html`;
   }
 
-  return document.id;
+  return url;
 };
 /**
  * Defines a list of paths which will redirect to the path created by getPath.
