@@ -18,6 +18,7 @@ export default function Nearby(props: any) {
     const miles = meters * 0.000621371;
     return miles.toFixed(2);
   }
+  // console.log(props);
 
   return (
 
