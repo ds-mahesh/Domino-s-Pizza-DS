@@ -36,6 +36,8 @@ function opentime(e: any) {
   }
 }
 
+
+
     const { address } = result.rawData;
 //     var name: any = result.rawData.name?.toLowerCase();
 //   var region: any = result.rawData.address.region?.toLowerCase();

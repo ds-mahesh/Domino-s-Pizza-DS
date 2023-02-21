@@ -290,11 +290,11 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
                   fieldApiName: "address.region",
 
                   },
-                  // {
-                  //   entityType: "location",
-                  //   fieldApiName: "address.countryCode",
+                  {
+                    entityType: "location",
+                    fieldApiName: "address.countryCode",
 
-                  // },
+                  },
                 ]}
                 
                 handleInputValue={handleInputValue}  
