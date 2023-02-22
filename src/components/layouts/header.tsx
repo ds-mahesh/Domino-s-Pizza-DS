@@ -16,10 +16,10 @@ const Header = ( props : any) => {
 
   return (
     <>
-         <div style={{backgroundColor:"SteelBlue"}}>
-            <div style={{fontSize:"Oswald",height:"80px"}} className="flex gap-x-16 font-semibold">
-               <img style={{height:"80px",width:"130px"}} src={_site.logo?.image?.url} />
-                  <div style={{padding:"15px",marginLeft:"10px"}} className="flex gap-x-8 text-2xl ">
+         <div style={{backgroundColor:"teal"}}>
+            <div style={{height:"80px",backgroundColor:"teal"}} className="flex gap-x-4 font-semibold">
+               <img style={{height:"80px",width:"100px"}} src={_site.logo?.image?.url} />
+                  <div style={{padding:"16px",marginTop:"15px"}} className="flex gap-x-8 text-2xl ">
                      {linkDoms}
                      <a href="#">
                        <div className=""> {<Cta

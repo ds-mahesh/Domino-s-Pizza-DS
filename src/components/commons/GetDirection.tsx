@@ -4,40 +4,40 @@ import { conversionDetailsDirection, conversionDetailsPhone, Directionsvg } from
 
 type Cta = {
   buttonText: string;
-  address :object;
+  address: object;
   latitude?: number;
   longitude?: number;
 };
 
 const GetDirection = (props: GetDirection) => {
-  const { 
-    buttonText, 
+  const {
+    buttonText,
     latitude,
-	address,
-    longitude 
+    address,
+    longitude
   } = props;
 
-  
+
   const getDirectionUrl = () => {
     var origin: any = null;
     if (address.city) {
       origin = address.city;
     } else if (address.region) {
       origin = address.region;
-    }  else {
+    } else {
       origin = address.country;
     }
     if (navigator.geolocation) {
       const error = (error: any) => {
         var getDirectionUrl =
-        "https://www.google.com/maps/dir/?api=1&destination=" +
-       latitude +
-        "," +
-        longitude +
-        "&origin=" +
-        origin +"," +'UK';
+          "https://www.google.com/maps/dir/?api=1&destination=" +
+          latitude +
+          "," +
+          longitude +
+          "&origin=" +
+          origin + "," + 'UK';
 
-      window.open(getDirectionUrl, "_blank");
+        window.open(getDirectionUrl, "_blank");
       };
       navigator.geolocation.getCurrentPosition(
         function (position) {
@@ -46,9 +46,9 @@ const GetDirection = (props: GetDirection) => {
           let currentLongitude = position.coords.longitude;
           let getDirectionUrl =
             "https://www.google.com/maps/dir/?api=1&destination=" +
-           latitude +
+            latitude +
             "," +
-           longitude +
+            longitude +
             "&origin=" +
             currentLatitude +
             "," +
@@ -66,24 +66,25 @@ const GetDirection = (props: GetDirection) => {
   // const conversionDetails_phone = conversionDetailsPhone;
 
   return (
-    <>   
-     <Link
-                      data-ya-track="getdirections"
-                      eventName={`getdirections`}
-                      className="btn notHighligh"
-                      onClick={getDirectionUrl}
-                      href="javascript:void(0);"
-                      rel="noopener noreferrer"
-                      conversionDetails={conversionDetails_direction}
-                    >
-                        {buttonText}
-                    </Link>
-    {/* <a
-     onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >
-      <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> */}
-    
-    
-    {/* </a> */}
+    <>
+      <Link
+        data-ya-track="getdirections"
+        eventName={`getdirections`}
+        className="btn notHighligh"
+        onClick={getDirectionUrl}
+        href="javascript:void(0);"
+        rel="noopener noreferrer"
+        conversionDetails={conversionDetails_direction}
+        style={{ backgroundColor: "DodgerBlue", width: "100px" }}
+      >
+        {buttonText}
+
+      </Link>
+      {/* <img src="https://th.bing.com/th/id/R.5543977e539f0979e782db81b1ee4d86?rik=xxyh5oY%2fMyaXrA&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f9cp%2f6Ka%2f9cp6Kakyi.jpg&ehk=DgyitthMoWfR8Zhd65neDxsgGhIckdRrV2p1nGww5bI%3d&risl=&pid=ImgRaw&r=0" /> */}
+      <a
+        onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >
+        <div dangerouslySetInnerHTML={{ __html: Directionsvg }} />
+      </a>
     </>
 
   );

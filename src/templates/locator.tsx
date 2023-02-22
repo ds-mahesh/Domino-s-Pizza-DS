@@ -45,6 +45,7 @@ export const config: TemplateConfig = {
       // "c_cardlogo",
       // "c_cardlogo1",
       // "c_cardlogo2"
+      
 
 
 

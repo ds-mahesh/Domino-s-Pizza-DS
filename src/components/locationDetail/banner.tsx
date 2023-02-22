@@ -16,8 +16,8 @@ type Banner = {
   hours?: any;
   timezone?: any;
   clickcollect?: object;
-  c_bannerImage?: string;
-  c_bannerphoto?: string;
+  c_bannerImage?: any;
+  c_bannerphoto?: any;
   c_bannerVideo?:string;
   c_locatorBannerAdditionalText?:string;
   children?: React.ReactNode;
@@ -35,15 +35,18 @@ const renderPrettyAddress = (address?: Address) => {
   );
 };
 
+
 const Banner = (props: Banner) => {
   const { name, address, clickcollect,c_bannerVideo, c_bannerImage,c_bannerphoto,c_locatorBannerAdditionalText, children} = props;
-  
-
+ 
+  // const image =c_bannerImage?.map((i: any) => (
+  //   <img src={i.url} className="" alt="..." />
+  // ));
   return (
     <>
       <div className="hero-section">
-        <img className="hero-image"
-          src={c_bannerImage?c_bannerImage:Defaultimage} alt="banner" width="fULL" height="50" />
+        {/* <img className="hero-image"
+          src={c_bannerphoto?.url} alt="banner"  /> */}
         <div className="hero-content">
           <div className="container">
             <div className={`banner-text  ${props.hours && props.timezone ? 'banner-dark-bg': ''}`}>
@@ -62,6 +65,7 @@ const Banner = (props: Banner) => {
           </div>
         </div>
         </div>
+        {/* <div>{image}</div> */}
       </>
       );
 };

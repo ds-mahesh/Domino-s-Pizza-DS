@@ -31,7 +31,7 @@ const Footer = (props: any) => {
 	})
 	// const toggle = () => {
 	//   (document.getElementById("body") as HTMLInputElement).classList.toggle('');
-	// };
+	// }
 	const Company = props?._site?.c_company?.map((link: any) => (
 	  <a className="navbar-item" href={link.link} >
 		<span>{link.label}</span><br />
@@ -76,7 +76,7 @@ const Footer = (props: any) => {
 			<footer className="site-footer inline-block w-full">
 							 		  					  					  
 				    
-				<div style={{backgroundColor:"SaddleBrown"}} >
+				<div style={{backgroundColor:"teal"}} >
 					
 				<div  className="container px-6 pt-6" style={{height:"330px"}}>
 					<div className="store-locator">					   

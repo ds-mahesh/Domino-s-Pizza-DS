@@ -59,14 +59,14 @@ export default function Faq(props: any) {
     <>
       <div className=" faq-main-sec">
 
-        <div className=" faq-card ">
+        <div className="pt-6">
           <div className="faq-sec-inner">
-            <h2 className="">{props.c_fAQsHeading?props.c_fAQsHeading:StaticData.FAQheading}</h2>
-            <div className="faq-tabs">{renderedQuestionsAnswers}</div>
+          <h1 style={{ color: "DodgerBlue" }}><b>{props.c_fAQsHeading?props.c_fAQsHeading:StaticData.FAQheading} </b></h1>
+            <div className="faq-tabs border-4">{renderedQuestionsAnswers}</div>
           </div>
         </div>
 
-
+       
       </div>
     </>
   );

@@ -86,7 +86,8 @@ export const config: TemplateConfig = {
       "dm_directoryParents.meta.entityType",
       "c_faq.question",
       "c_faq.answer",
-      "c_cardimagedescription"
+      "c_cardimagedescription",
+      "c_bannerphoto"
 
 
 
@@ -312,7 +313,8 @@ const Location: Template<ExternalApiRenderData> = ({
     dm_directoryParents,
     name,
     c_faq,
-    c_cardimagedescription
+    c_cardimagedescription,
+    c_bannerphoto
   } = document;
   // const services = c_servicesIn?.map((link: any) => (
   // 	<a className="navbar-item" href={link.link} >
@@ -538,7 +540,7 @@ const Location: Template<ExternalApiRenderData> = ({
               parents={dm_directoryParents}
               baseUrl={relativePrefixToRoot}
             ></BreadCrumbs>
-            {/* <Banner c_bannerImage={c_bannerImage}  name={name}/> */}
+            {/* <Banner c_bannerphoto={c_bannerphoto}  name={name}/> */}
             <div className="flex" style={{ backgroundColor: "DodgerBlue" }}>
               <div className="flex-col space-y-6" style={{ marginTop: "100px", marginLeft: "70px", width: "500px" }}>
                 <h1 style={{ fontSize: "35px", color: "white" }}>Domino's Online Ordering</h1>
@@ -563,7 +565,7 @@ const Location: Template<ExternalApiRenderData> = ({
                 </div>
               </div>
             </div>
-            <div className="location-information">
+            <div className="location-information" style={{backgroundColor:"lightblue"}}>
               <Contact address={address}
                 phone={mainPhone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
                 yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude} hours={hours} additionalHoursText={additionalHoursText} ></Contact>
