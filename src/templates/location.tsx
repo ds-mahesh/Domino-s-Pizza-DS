@@ -120,7 +120,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let result: any = string.replaceAll(" ", "-");
   document.dm_directoryParents.map((result: any, i: Number) => {
     if (i > 0) {
-      url += result.slug + "/"
+      url = result.slug + "/"
     }
   })
   if (!document.slug) {
@@ -129,7 +129,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
     url = `${document.slug.toString()}.html`;
   }
 
-  return document.id;
+  return url;
 };
 /**
  * Defines a list of paths which will redirect to the path created by getPath.
