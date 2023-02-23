@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Interval {
 	start?: any,
 	end?: any,
@@ -247,6 +249,8 @@ export interface ComplexVideo {
 }
 
 export interface Location {
+	c_dominosServices: ReactNode;
+// c_headerfooterservices:ReactNode;
   c_click_collect_availability: any;
   c_open_for_shopping: any;
   c_clickCollectAvaliability: any;
