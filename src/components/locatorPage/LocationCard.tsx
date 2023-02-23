@@ -10,6 +10,7 @@ import { StaticData } from "../../../sites-global/staticData";
 import { Link } from "@yext/pages/components";
 import { cookieText, cookiesUrl } from "../../../sites-global/global"
 import Hours from "../commons/hours";
+import Contact from "../locationDetail/contact";
 
 
 const metersToMiles = (meters: number) => {
@@ -37,7 +38,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
     }
   }
 
-  const { address, hours,mainPhone } = result.rawData;
+  const { address, hours } = result.rawData;
   var name: any = result.rawData.name?.toLowerCase();
   var region: any = result.rawData.address.region?.toLowerCase();
   var initialregion: any = region.toString();
@@ -87,7 +88,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
 
 
             <div className="icon-row content-col address-with-availablity notHighlight">
-              <Address address={address}/>
+              <Address address={address} />
               {result.rawData.hours ? <>
                 <div className="mt-2">
                   {/* <h6>Opening Hours</h6> */}
@@ -95,12 +96,13 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                     <div className="icon"> <img className=" " src={timesvg} width="20" height="20" alt="" /> </div>
                     <div className=" flex open-now-string items-center " data-id={`main-shop-${result.rawData.id}`} onClick={opentime}>
                       {StaticData.tempClosed}
-
                     </div>
-                    {/* <Contact address={address}
-                phone={mainPhone} ></Contact> */}
                   </>
                     : <>
+                      <div className="flex">
+                        <img className="h-6 w-6" src="https://cdn-icons-png.flaticon.com/128/3687/3687004.png" />
+                        {result.rawData.mainPhone}
+                        </div>
                       <div className="dropdown" style={{ position: "relative", display: "inline-block" }}>
                         <button onClick={show_hide} className=" flex open-now-string items-center" data-id={`main-shop-${result.rawData.id}`} >
                           <OpenClose
@@ -136,7 +138,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             </div>
             {result.rawData.c_dominosServices.map((item: any) => {
               return (<>
-                <div style={{ fontWeight: "400", fontSize: "15px", color: "teal", marginLeft:"18px" }}>
+                <div style={{ fontWeight: "400", fontSize: "15px", color: "teal", marginLeft: "18px" }}>
                   *{item.name}
                 </div>
               </>)

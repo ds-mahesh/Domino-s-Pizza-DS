@@ -136,14 +136,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:description",
-          content: `${document.c_meta_description ? document.c_meta_description : `View Domino's Pizza Merchants near you today at Domino's Pizza. We stock high-quality, robust products at competitive rates.`}`,
+          content: `${document.c_meta_description ? document.c_meta_description : `View Domino's Pizza Stores near you today at Domino's Pizza. We stock high-quality, robust products at competitive rates.`}`,
         },
       },
       {
         type: "meta",
         attributes: {
           name: "twitter:title",
-          content: `${document.c_meta_title ? document.c_meta_title : `Domino's Pizza Merchants Near Me - Find Domino's Pizza Branch Locator Here.`}`,
+          content: `${document.c_meta_title ? document.c_meta_title : `Domino's Pizza Stores Near Me - Find Domino's Pizza Branch Locator Here.`}`,
         },
       },
       {

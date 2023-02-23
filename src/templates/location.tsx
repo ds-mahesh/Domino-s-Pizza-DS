@@ -636,7 +636,7 @@ const Location: Template<ExternalApiRenderData> = ({
             <div className=" flex space-x-4 pt-6 " style={{ height: "270px" }}>{Cuponcard}</div>
             <h2 className=" pt-6" style={{ fontSize: "30px", paddingLeft: "30px", color: "gray" }}><b>PIZZA</b></h2>
 
-            <div className="flex space-x-8">{cardImageDescription}</div>
+            <div className="flex space-x-8 pt-6">{cardImageDescription}</div>
 
             <h1 className="pt-8" style={{ color: "GrayText", paddingLeft: "20px" }}><b>Explore</b></h1>
             <div className="flex" style={{ backgroundColor: "lightBlue", height: "500px" }}>

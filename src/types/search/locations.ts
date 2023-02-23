@@ -250,11 +250,10 @@ export interface ComplexVideo {
 
 export interface Location {
 	c_dominosServices: ReactNode;
-// c_headerfooterservices:ReactNode;
-  c_click_collect_availability: any;
-  c_open_for_shopping: any;
-  c_clickCollectAvaliability: any;
-  c_openForShoppingAvailibitlity: any;
+	c_click_collect_availability: any;
+	c_open_for_shopping: any;
+	c_clickCollectAvaliability: any;
+	c_openForShoppingAvailibitlity: any;
 	accessHours?: Hours,
 	blackOwnedBusiness?: boolean,
 	brunchHours?: Hours,

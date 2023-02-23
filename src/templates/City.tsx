@@ -1,6 +1,6 @@
 import * as React from "react";
 // import Banner from "../components/banner";
-// import favicon from "../images/vodafone-favIcon.ico";
+// import favicon from "../images/Domino's Pizza-favIcon.ico";
 // import BreadCrumbs from "../components/layouts/BreadCrumbs";
 // import { AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie } from "../types/constants";
 // import GetDirection from "../components/GetDirection";
@@ -120,9 +120,9 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 }): HeadConfig => {
 
   let metaDescription = document._site ? document._site : "Find your nearest Domino's Pizza Store and which services are available." + document.name;
-  let metaTitle = `Vodafone Store in ${document.name} | Find a Local Store`;
+  let metaTitle = `Domino's Pizza Store in ${document.name} | Find a Local Store`;
   // let canonicalURL = document._site.c_metaTags.canonicalURL  ? document._site.c_metaTags.canonicalURL + document.dm_directoryParents[1].name.toLowerCase() +"/"+ document.dm_directoryParents[2].slug +"/"+ document.slug + ".html"  : stagingBaseUrl + document.dm_directoryParents[1].name.toLowerCase() +"/"+ document.dm_directoryParents[2].slug +"/"+ document.slug + ".html"
-  // let ogmetaImage = document._site.c_ogmetaTags.oGImage[0].url ? document._site.c_ogmetaTags.oGImage[0].url : "https://cdn.vodafone.co.uk/en/assets/images/large/IMG_10480.jpg"
+  // let ogmetaImage = document._site.c_ogmetaTags.oGImage[0].url ? document._site.c_ogmetaTags.oGImage[0].url : "https://cdn.Domino's Pizza.co.uk/en/assets/images/large/IMG_10480.jpg"
 
   return {
     title: metaTitle,
@@ -156,7 +156,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "author",
-          content: " Vodafone",
+          content: " Domino's Pizza",
         },
       },
 
@@ -234,7 +234,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:image",
-          content: `https://www.vodafone.co.uk/cs/groups/configfiles/documents/document/favicon.ico`
+          content: `https://www.Domino's Pizza.co.uk/cs/groups/configfiles/documents/document/favicon.ico`
         },
       },
       {
@@ -307,7 +307,7 @@ const City: Template<TemplateRenderProps> = ({
       detailPageUrl = `${entity.id}-${result}.html`
     }
     else {
-      detailPageUrl = `${entity.slug.toString()}.html`
+      detailPageUrl = `${entity.slug.toString()}`
       console.log(detailPageUrl);
     }
     return (
@@ -599,12 +599,12 @@ const City: Template<TemplateRenderProps> = ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Vodafone UK",
-          "url": "https://www.vodafone.co.uk/",
+          "name": "Domino's Pizza",
+          "url": "https://www.Domino's Pizza.co.uk/",
           //"logo": favicon,
           "sameAs": [
-            "https://www.twitter.com/VodafoneUK",
-            "https://www.facebook.com/vodafoneUK"
+            "https://www.twitter.com/Domino's Pizza",
+            "https://www.facebook.com/Domino's Pizza"
           ],
         }}
       /> */}
