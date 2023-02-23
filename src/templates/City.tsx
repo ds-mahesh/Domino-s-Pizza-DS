@@ -297,7 +297,7 @@ const City: Template<TemplateRenderProps> = ({
     }
     // let key: any = Object.keys(entity.hours)[0];
     let detailPageUrl = '';
-    var name: any = entity.name;
+    var name: any = entity.name.toLowerCase();
     var string: any = name.toString();
     let removeSpecialCharacters = string.replace(
       /[&\/\\#^+()$~%.'":*?<>{}!@]/g,
@@ -307,7 +307,7 @@ const City: Template<TemplateRenderProps> = ({
       detailPageUrl = `${entity.id}-${result}.html`
     }
     else {
-      detailPageUrl = `${entity.slug.toString()}`
+      detailPageUrl = `${entity.slug.toString()}.html`
       console.log(detailPageUrl);
     }
     return (
